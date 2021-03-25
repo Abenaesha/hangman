@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import UpdateDiagram from "./components/Diagram";
+import Header from "./components/Header";
+import Keyboard from "./components/Keyboard";
+import UpdateProgress from "./components/Progress";
+import ResetButton from "./components/Reset";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    word: "banana",
+    incorrectGuessesNumber: 0,
+    correctGuessesNumber: 0,
+    correctGuesses: [],
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <section id="Row1">
+          <div id="Diagram">
+            <UpdateDiagram />
+          </div>
+          <div id="Progress">
+            <UpdateProgress />
+          </div>
+        </section>
+        <section id="Section2">
+          <ResetButton />
+          <Keyboard word={this.state.word} />
+        </section>
+      </div>
+    );
+  }
 }
 
 export default App;
