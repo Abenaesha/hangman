@@ -1,5 +1,8 @@
-function ResetButton() {
-  return <h1>Reset Goes Here</h1>;
+function ResetButton({resetButton}) {
+  return (
+  <button onClick={() => resetButton()}>Start Again!</button>
+    )
+
 }
 
 export default ResetButton;

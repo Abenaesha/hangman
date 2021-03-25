@@ -1,4 +1,4 @@
-function UpdateProgress() {
+function UpdateProgress(props) {
   return <h1>Progress Goes Here</h1>;
 }
 
