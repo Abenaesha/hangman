@@ -6,6 +6,16 @@
   color: rgb(247, 244, 242);
 }
 
+.valid {
+  background-color: rgb(180, 249, 180);
+}
+
+.invalid {
+  background-color: rgb(250, 151, 151);
+}
+.normal {
+  background-color: rgb(247, 244, 242);
+}
 /* .header {
   margin-top: 50px;
 } */
@@ -29,9 +39,8 @@
   justify-content: center;
   margin: 15px;
 }
-#keyboard button{
-  background-color: rgb(247, 244, 242);
-  color: rgba(10, 15, 44, 0.76);;
+#keyboard button {
+  color: rgba(10, 15, 44, 0.76);
   font-size: 1rem;
   font-weight: bold;
 }
