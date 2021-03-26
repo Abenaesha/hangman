@@ -1,10 +1,44 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: rgba(50, 53, 92, 0.699);
+  color: rgb(247, 244, 242);
 }
+
+/* .header {
+  margin-top: 50px;
+} */
 
 #Row1 {
   display: flex;
   justify-content: space-around;
+  margin-top: 100px;
+}
+#progress {
+  margin-top: 150px;
+}
+
+#section2 {
+  margin: 200px auto;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+}
+#keyboard button{
+  background-color: rgb(247, 244, 242);
+  color: rgba(10, 15, 44, 0.76);;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#reset {
+  background-color: rgba(245, 11, 11, 0.493);
+  color: rgb(228, 221, 216);
 }
 
 /*

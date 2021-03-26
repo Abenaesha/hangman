@@ -6,22 +6,26 @@ import Keyboard from "./components/Keyboard";
 import UpdateProgress from "./components/Progress";
 import ResetButton from "./components/Reset";
 
+
 class App extends React.Component {
+
   state = {
-    word: "banana",
+    word: "northcoders",
     incorrectGuessesNumber: 0,
     correctGuessesNumber: 0,
     correctGuesses: [],
+    maxGuesses: 6
   };
 
  pressLetter = (letter, word) => {
     let letterInWord = false;
     for (let i = 0; i < word.length; i++) {
-      if (letter === word[i]) {
+      if (letter.toLowerCase() === word[i]) {
         letterInWord = true
         break;
       }
     }
+
     this.setState((currState) => {
       if (letterInWord === true) {
         let newCorrectGuesses = [...currState.correctGuesses];
@@ -44,28 +48,38 @@ class App extends React.Component {
 
   resetButton = () => {
     this.setState({
-      word: "banana",
+      word: "northcoders",
       incorrectGuessesNumber: 0,
       correctGuessesNumber: 0,
       correctGuesses: [],
+      maxGuesses: 6
     });
   }
 
   render() {
     return (
       <div className="App">
+        <div className="header">
         <Header />
+        </div>
         <section id="Row1">
           <div id="Diagram">
             <UpdateDiagram />
           </div>
-          <div id="Progress">
-            <UpdateProgress word={this.state.word} correctGuesses={this.state.correctGuesses} />
+          <div id="progress">
+            <UpdateProgress 
+            word={this.state.word} 
+            correctGuesses={this.state.correctGuesses}
+            maxGuesses={this.state.maxGuesses}
+            incorrectGuessesNumber={this.state.incorrectGuessesNumber}
+            resetButton={this.resetButton} />
           </div>
         </section>
-        <section id="Section2">
+        <section id="section2">
           <ResetButton resetButton={this.resetButton}/>
-          <Keyboard word={this.state.word} pressLetter={this.pressLetter} />
+          <div id="keyboard">
+          <Keyboard word={this.state.word} pressLetter={this.pressLetter} correctGuesses={this.state.correctGuesses}/>
+          </div>
         </section>
       </div>
     );
