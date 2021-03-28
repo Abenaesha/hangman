@@ -81,8 +81,8 @@ class App extends React.Component {
         <div className="header">
           <Header />
         </div>
-        <section id="Row1">
-          <div id="Diagram">
+        <section id="section1">
+          <div id="diagram">
             <UpdateDiagram
               incorrectGuessesNumber={this.state.incorrectGuessesNumber}
             />

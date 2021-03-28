@@ -7,7 +7,7 @@ import image6 from "../images/5.jpg";
 import image7 from "../images/6.jpg";
 
 function UpdateDiagram(props) {
-  {
+  
     if (props.incorrectGuessesNumber === 0) {
       return <img src={image1} alt={"post"}></img>;
     } else if (props.incorrectGuessesNumber === 1) {
@@ -23,8 +23,8 @@ function UpdateDiagram(props) {
     } else if (props.incorrectGuessesNumber === 6) {
       return <img src={image7} alt={"right leg"}></img>;
     }
-    return <img src={image1}></img>;
-  }
+    return <img src={image1} alt={"post"}></img>;
+
 }
 
 export default UpdateDiagram;
