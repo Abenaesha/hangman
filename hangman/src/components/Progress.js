@@ -1,9 +1,9 @@
 function UpdateProgress(props) {
   return (
     <div>
-      <h2><span>G</span>uess <span>T</span>he <span>Word</span>😎</h2>
+      <h2><span>G</span>uess <span>T</span>he <span>Word</span> 😎</h2>
       {props.incorrectGuessesNumber === props.maxGuesses ? (
-        <h3>Sorry, you lost! 😞</h3>
+        <h3>YOU LOST 😞. START AGAIN!</h3>
       ) : null}
       <p>
         {props.word.split("").map((letter) => {

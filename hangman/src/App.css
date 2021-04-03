@@ -40,6 +40,10 @@
   color: rgb(255, 61, 2);
 }
 
+#progress h3 {
+  color: rgb(255, 255, 255);
+}
+
 #progress p{
   color: rgb(219, 186, 163);
   font-weight: bold;

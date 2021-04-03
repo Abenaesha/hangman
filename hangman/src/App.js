@@ -12,7 +12,7 @@ class App extends React.Component {
     return word;
   };
   state = {
-    word: this.chooseRandomWord(["hello", "there", "guys"]),
+    word: this.chooseRandomWord(["javascript", "python", "summer", "hello", "bugatti", "keonigsegg", "react", "typescript", "angular", "winter", "life"]),
     incorrectGuessesNumber: 0,
     correctGuessesNumber: 0,
     correctGuesses: [],
@@ -22,7 +22,7 @@ class App extends React.Component {
   };
 
   pressLetter = (letter, word) => {
-    let wordGuessed = true;
+    // let wordGuessed = true;
     let letterInWord = false;
     for (let i = 0; i < word.length; i++) {
       if (letter.toLowerCase() === word[i]) {
@@ -31,11 +31,11 @@ class App extends React.Component {
       }
     }
     // for (let i = 0; i < this.state.correctGuesses.length; i++) {
-    //   if (!word.split("").contains(this.state.correctGuesses[i])) {
+    //   if (!word.split("").includes(this.state.correctGuesses[i])) {
     //     wordGuessed = false;
     //   }
     // }
-    console.log(wordGuessed);
+    // console.log(wordGuessed);
     this.setState((currState) => {
       if (letterInWord === true) {
         let newAllGuesses = [...currState.allGuesses];
@@ -65,7 +65,7 @@ class App extends React.Component {
 
   resetButton = () => {
     this.setState({
-      word: this.chooseRandomWord(["hello", "there", "guys"]),
+      word: this.chooseRandomWord(["javascript", "python", "summer", "hello", "bugatti", "keonigsegg", "react", "typescript", "angular", "winter", "life"]),
       incorrectGuessesNumber: 0,
       correctGuessesNumber: 0,
       correctGuesses: [],
