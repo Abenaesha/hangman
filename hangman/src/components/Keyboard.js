@@ -28,7 +28,7 @@ function Keyboard(props) {
     "Z",
   ];
   return letters.map((letter) => (
-    <div key={letter} id={letter}>
+    <div className='button' key={letter} id={letter}>
       <button
         disabled={
           props.incorrectGuessesNumber === props.maxGuesses
